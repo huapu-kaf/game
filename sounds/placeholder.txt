@@ -1,0 +1,23 @@
+# 音效文件占位符说明
+
+由于音效文件较大，请按照以下步骤添加音效：
+
+1. 访问 https://pixabay.com/sound-effects/
+2. 搜索并下载以下音效（免费注册后可下载）：
+
+推荐搜索关键词和对应文件名：
+- "game music" 或 "fantasy music" → 重命名为 background.mp3
+- "laser" 或 "shoot" → 重命名为 shoot.mp3  
+- "explosion" 或 "death" → 重命名为 enemy_death.mp3
+- "hurt" 或 "damage" → 重命名为 player_hurt.mp3
+- "level up" 或 "achievement" → 重命名为 level_up.mp3
+- "pickup" 或 "coin" → 重命名为 gem_pickup.mp3
+- "game over" 或 "fail" → 重命名为 game_over.mp3
+
+3. 将音效文件放入 sounds/ 目录
+4. 刷新游戏页面
+
+注意：
+- 即使没有音效文件，游戏也能正常运行
+- 游戏会自动检测音效文件是否存在
+- 控制台会显示音效加载状态

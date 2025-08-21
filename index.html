@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔法生存游戏 - Magic Survival Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a3a, #2d1b69, #0f0f23);
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #gameContainer {
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.5);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #4a6741;
+        }
+        
+        #gameCanvas {
+            display: block;
+            border-radius: 8px;
+            background: #000;
+        }
+        
+        #loadingOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #333;
+            border-top: 5px solid #00ff88;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .game-info {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .controls {
+            margin-top: 10px;
+        }
+        
+        .control-key {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin: 0 2px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        #errorMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(200, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            z-index: 1001;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- 加载界面 -->
+        <div id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <div>加载游戏资源中...</div>
+            <div style="font-size: 16px; margin-top: 10px; color: #ccc;">Magic Survival Game</div>
+        </div>
+        
+        <!-- 错误提示 -->
+        <div id="errorMessage">
+            <h3>游戏加载失败</h3>
+            <p id="errorText"></p>
+            <button onclick="location.reload()" style="margin-top: 10px; padding: 5px 15px;">重新加载</button>
+        </div>
+        
+        <!-- 游戏画布 -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <!-- 游戏信息 -->
+        <div class="game-info">
+            <div>使用 <span class="control-key">WASD</span> 移动 | <span class="control-key">M</span> 音乐开关 | <span class="control-key">N</span> 音效开关</div>
+            <div class="controls">选择武器: <span class="control-key">1</span> 魔法飞弹 <span class="control-key">2</span> 火球术 <span class="control-key">3</span> 冰霜箭 | <span class="control-key">R</span> 重新开始</div>
+        </div>
+    </div>
+
+    <!-- 游戏脚本 - 按依赖顺序加载 -->
+    <script>
+        // 全局错误处理
+        window.addEventListener('error', function(e) {
+            console.error('Game Error:', e.error);
+            showError('脚本加载错误: ' + e.message);
+        });
+        
+        // 显示错误信息
+        function showError(message) {
+            document.getElementById('errorText').textContent = message;
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
+        
+        // 隐藏加载界面
+        function hideLoading() {
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').classList.add('hidden');
+            }, 1000);
+        }
+    </script>
+    
+    <!-- 核心配置 -->
+    <script src="js/config.js" onerror="showError('配置文件加载失败')"></script>
+    
+    <!-- 工具函数 -->
+    <script src="js/utils.js" onerror="showError('工具函数加载失败')"></script>
+    
+    <!-- 音频系统 -->
+    <script src="js/audio.js" onerror="showError('音频系统加载失败')"></script>
+    
+    <!-- 资源管理 -->
+    <script src="js/assets.js" onerror="showError('资源管理器加载失败')"></script>
+    
+    <!-- 特效系统 -->
+    <script src="js/effects.js" onerror="showError('特效系统加载失败')"></script>
+    
+    <!-- 敌人系统 -->
+    <script src="js/enemies.js" onerror="showError('敌人系统加载失败')"></script>
+    
+    <!-- 武器系统 -->
+    <script src="js/weapons.js" onerror="showError('武器系统加载失败')"></script>
+    
+    <!-- 玩家系统 -->
+    <script src="js/player.js" onerror="showError('玩家系统加载失败')"></script>
+    
+    <!-- 界面系统 -->
+    <script src="js/ui.js" onerror="showError('界面系统加载失败')"></script>
+    
+    <!-- 输入处理 -->
+    <script src="js/input.js" onerror="showError('输入处理加载失败')"></script>
+    
+    <!-- 升级系统 -->
+    <script src="js/upgrades.js" onerror="showError('升级系统加载失败')"></script>
+    
+    <!-- 主控制器 -->
+    <script src="js/main.js" onerror="showError('主控制器加载失败')"></script>
+    
+    <!-- 游戏启动脚本 -->
+    <script>
+        // 等待所有脚本加载完成
+        window.addEventListener('load', function() {
+            try {
+                // 检查必要的全局变量是否存在
+                if (typeof GameConfig === 'undefined') {
+                    throw new Error('GameConfig 未定义');
+                }
+                
+                const gameCanvas = document.getElementById('gameCanvas');
+                if (!gameCanvas) {
+                    throw new Error('Canvas 元素未找到');
+                }
+                
+                console.log('🎮 魔法生存游戏已启动');
+                console.log('📦 所有模块加载完成');
+                console.log('🎯 游戏配置:', GameConfig);
+                
+                // 隐藏加载界面
+                hideLoading();
+                
+            } catch (error) {
+                console.error('Game initialization failed:', error);
+                showError('游戏初始化失败: ' + error.message);
+            }
+        });
+        
+        // 防止页面被意外刷新
+        window.addEventListener('beforeunload', function(e) {
+            if (typeof gameState !== 'undefined' && gameState === GameStates.PLAYING) {
+                e.preventDefault();
+                e.returnValue = '确定要离开游戏吗？当前进度将丢失。';
+                return e.returnValue;
+            }
+        });
+        
+        // 页面焦点管理
+        window.addEventListener('focus', function() {
+            console.log('🎮 游戏窗口获得焦点');
+        });
+        
+        window.addEventListener('blur', function() {
+            console.log('🎮 游戏窗口失去焦点');
+        });
+    </script>
+</body>
+</html>
