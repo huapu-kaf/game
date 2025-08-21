@@ -42,6 +42,10 @@ function initInputSystem() {
             selectedWeapon = 'frostbolt';
             weapons.frostbolt.level = 1;
             startGame();
+        } else if (key === KeyBindings.WEAPON_4) {
+            selectedWeapon = 'book';
+            weapons.book.level = 1;
+            startGame();
         }
     } else if (gameState === GameStates.PLAYING) {
         // 游戏进行中

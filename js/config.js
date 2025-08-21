@@ -19,13 +19,13 @@ const GameConfig = {
     
     // 游戏机制
     GAMEPLAY: {
-        ENEMY_SPAWN_INTERVAL: 2000,  // 敌人生成间隔（毫秒）
+        ENEMY_SPAWN_INTERVAL: 1000,  // 敌人生成间隔（毫秒） - 更快节奏
         SHOOT_INTERVAL: 50,          // 射击检查间隔（毫秒）
         INVULNERABLE_TIME: 60,       // 无敌时间（帧）
         COMBO_TIMER: 180,            // 连击时间（帧）
-        EXPERIENCE_COLLECT_RANGE: 30,
-        EXPERIENCE_FAST_COLLECT_RANGE: 60,
-        EXPERIENCE_MAGNET_RANGE: 120
+        EXPERIENCE_COLLECT_RANGE: 40,    // 增大拾取范围
+        EXPERIENCE_FAST_COLLECT_RANGE: 80,
+        EXPERIENCE_MAGNET_RANGE: 150
     },
     
     // 音频设置
@@ -51,43 +51,80 @@ const GameConfig = {
     }
 };
 
-// 敌人类型定义
+// 敌人类型定义 - 吸血鬼幸存者风格
 const EnemyTypes = {
-    FAST: { 
-        name: '快速小怪', 
+    SKELETON: { 
+        name: '骷髅兵', 
         health: 8, 
-        speed: 3.5, 
-        size: 15, 
-        color: '#FF6B6B', 
-        exp: 15,
-        probability: 0.5
+        speed: 2.5, 
+        size: 16, 
+        color: '#F0F0F0', 
+        exp: 10,
+        probability: 0.4,
+        icon: '💀'
     },
-    NORMAL: { 
-        name: '普通敌人', 
+    ZOMBIE: { 
+        name: '僵尸', 
         health: 15, 
-        speed: 2, 
-        size: 20, 
-        color: '#DC143C', 
-        exp: 20,
-        probability: 0.3
+        speed: 1.8, 
+        size: 18, 
+        color: '#90EE90', 
+        exp: 15,
+        probability: 0.25,
+        icon: '🧟'
     },
-    TANK: { 
-        name: '坦克巨怪', 
-        health: 40, 
-        speed: 1.2, 
+    BAT: { 
+        name: '蝙蝠', 
+        health: 3, 
+        speed: 4.5, 
+        size: 12, 
+        color: '#800080', 
+        exp: 8,
+        probability: 0.2,
+        icon: '🦇'
+    },
+    GHOST: { 
+        name: '幽灵', 
+        health: 12, 
+        speed: 3.0, 
+        size: 20, 
+        color: '#E6E6FA', 
+        exp: 20,
+        probability: 0.1,
+        icon: '👻',
+        special: 'phasing' // 特殊能力：相位
+    },
+    WEREWOLF: { 
+        name: '狼人', 
+        health: 35, 
+        speed: 3.5, 
+        size: 24, 
+        color: '#8B4513', 
+        exp: 40,
+        probability: 0.03,
+        icon: '🐺'
+    },
+    VAMPIRE: { 
+        name: '吸血鬼', 
+        health: 50, 
+        speed: 2.8, 
+        size: 22, 
+        color: '#DC143C', 
+        exp: 60,
+        probability: 0.015,
+        icon: '🧛',
+        special: 'regeneration' // 特殊能力：再生
+    },
+    DEMON: { 
+        name: '恶魔', 
+        health: 80, 
+        speed: 2.0, 
         size: 30, 
         color: '#8B0000', 
-        exp: 50,
-        probability: 0.15
-    },
-    ELITE: { 
-        name: '精英怪物', 
-        health: 25, 
-        speed: 2.5, 
-        size: 25, 
-        color: '#FF4500', 
-        exp: 80,
-        probability: 0.05
+        exp: 100,
+        probability: 0.005,
+        icon: '👹',
+        special: 'fire_aura' // 特殊能力：火焰光环
     }
 };
 
@@ -138,6 +175,14 @@ const WeaponConfig = {
         cooldown: 0, 
         maxCooldown: 35, 
         range: 200 
+    },
+    laser: {
+        level: 0,
+        damage: 25,
+        cooldown: 0,
+        maxCooldown: 60,
+        duration: 30,
+        range: 400
     }
 };
 
@@ -160,5 +205,6 @@ const KeyBindings = {
     RESTART: 'r',
     WEAPON_1: '1',
     WEAPON_2: '2',
-    WEAPON_3: '3'
+    WEAPON_3: '3',
+    WEAPON_4: '4'
 };

@@ -1,0 +1,334 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/http/server.py", line 1314, in <module>
+    test(
+  File "/usr/local/lib/python3.12/http/server.py", line 1261, in test
+    with ServerClass(addr, HandlerCl127.0.0.1 - - [21/Aug/2025 06:04:31] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:05:38] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/audio.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/utils.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/assets.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/effects.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /sounds/shoot.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /sounds/player_hurt.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /sounds/background.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /sounds/enemy_death.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:39] "GET /sounds/level_up.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:40] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:40] "GET /sounds/game_over.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:05:42] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:05:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:42] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:05:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:42] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:05:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:05:42] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:07] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/config.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/weapons.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/upgrades.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/assets.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/effects.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/utils.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/player.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/main.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/ui.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:08] "GET /js/audio.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /js/enemies.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /sounds/shoot.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /sounds/player_hurt.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /sounds/background.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /sounds/enemy_death.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /sounds/level_up.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:09] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:09] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:10] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:10] "GET /sounds/game_over.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:11] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:11] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:11] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /js/enemies.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:18] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:18] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:24] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:25] "GET /js/enemies.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:25] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:25] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:25] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:25] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:25] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:25] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:25] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:56] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/enemies.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:17:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:17:57] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:01] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:18:02] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:02] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:02] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:02] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:02] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:02] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:02] "GET /enemy.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Aug/2025 06:18:04] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:18:37] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:38] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:45] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:18:45] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:45] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:18:46] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:46] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:46] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:46] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:18:46] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:18:46] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/effects.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/audio.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/main.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/utils.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/assets.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:25] "GET /js/ui.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:19:26] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/enemy_death.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/level_up.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/shoot.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/background.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/player_hurt.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:19:27] "GET /sounds/game_over.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:06] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/achievements.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:20:07] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:20:07] "GET /player.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Aug/2025 06:23:01] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/audio.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/config.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/main.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/assets.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/effects.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/input.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/achievements.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:36] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:37] "GET /js/utils.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:37] "GET /js/ui.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/shoot.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/player_hurt.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/background.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/level_up.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/enemy_death.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:38] "GET /sounds/game_over.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:54] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:55] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:55] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:57] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:23:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:57] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:57] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:23:57] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:23:57] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:01] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:01] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:01] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:01] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:01] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:01] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:01] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:01] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/achievements.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:24:13] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:24:13] "GET /enemy.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Aug/2025 06:24:53] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/config.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/utils.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/player.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/assets.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/enemies.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/ui.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/main.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/weapons.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/audio.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/effects.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/input.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:10] "GET /js/upgrades.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /js/achievements.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/shoot.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/background.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/player_hurt.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/level_up.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:11] "GET /sounds/game_over.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:12] "GET /sounds/enemy_death.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:13] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:13] "GET /favicon.ico HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:36] "GET /sounds/background.mp3 HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:41] "HEAD / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/player.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/achievements.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/ui.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:25:42] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:25:42] "GET /bullet.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Aug/2025 06:27:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Aug/2025 06:27:12] "GET / HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET / HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/utils.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/upgrades.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/config.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/audio.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/main.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/ui.js HTTP/1.1" 200 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/enemies.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/achievements.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/input.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/assets.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:13] "GET /js/weapons.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /js/effects.js HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /player.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /sounds/shoot.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /sounds/enemy_death.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /sounds/level_up.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /sounds/background.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /enemy.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] code 404, message File not found
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /bullet.png HTTP/1.1" 404 -
+10.12.219.8 - - [21/Aug/2025 06:27:14] "GET /sounds/player_hurt.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:15] "GET /sounds/gem_pickup.mp3 HTTP/1.1" 304 -
+10.12.219.8 - - [21/Aug/2025 06:27:15] "GET /sounds/game_over.mp3 HTTP/1.1" 304 -

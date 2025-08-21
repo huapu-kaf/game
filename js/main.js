@@ -10,6 +10,8 @@ let selectedWeapon = null;
 let gameOver = false;
 let score = 0;
 let startTime = Math.floor(Date.now() / 1000);
+let gameTime = 0; // 游戏内时间（秒）
+let frameCount = 0; // 帧计数
 
 // 初始化音频管理器
 let audioManager;
@@ -46,6 +48,9 @@ function restartGame() {
     player.actionGlow = 0;
     player.comboKills = 0;
     player.comboTimer = 0;
+    player.killCount = 0;
+    player.comboCount = 0;
+    player.lastKillTime = 0;
     player.level = GameConfig.PLAYER.INITIAL_LEVEL;
     player.exp = GameConfig.PLAYER.INITIAL_EXP;
     player.expToNextLevel = GameConfig.PLAYER.INITIAL_EXP_TO_NEXT;
@@ -98,6 +103,11 @@ function restartGame() {
         resetUpgradeSystem();
     }
     
+    // 重置成就系统
+    if (typeof resetAchievements !== 'undefined') {
+        resetAchievements();
+    }
+    
     console.log('游戏重置完成');
 }
 
@@ -144,6 +154,25 @@ function checkCollisions() {
 
 // 游戏循环函数
 function gameLoop() {
+    // 更新游戏时间和帧计数
+    frameCount++;
+    if (gameState === GameStates.PLAYING && !gameOver) {
+        gameTime = Math.floor((Date.now()/1000) - startTime);
+        
+        // 更新连击系统
+        updateComboSystem();
+        
+        // 检查成就
+        if (typeof checkAchievements !== 'undefined') {
+            checkAchievements();
+        }
+        
+        // 更新成就通知
+        if (typeof updateAchievementNotifications !== 'undefined') {
+            updateAchievementNotifications();
+        }
+    }
+    
     // 清空整个画布
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
@@ -186,6 +215,11 @@ function gameLoop() {
                 
                 // 更新粒子
                 updateParticles();
+                
+                // 更新波次系统
+                if (typeof updateWaveSystem !== 'undefined') {
+                    updateWaveSystem();
+                }
                 
                 // 更新屏幕震动
                 updateScreenShake();
@@ -237,13 +271,77 @@ function gameLoop() {
         
         // 绘制UI（不受震动影响）
         drawUI();
+        
+        // 绘制升级选择界面（如果打开）
+        if (typeof drawUpgradeMenu !== 'undefined') {
+            drawUpgradeMenu();
+        }
+        
+        // 绘制成就通知
+        if (typeof drawAchievementNotifications !== 'undefined') {
+            drawAchievementNotifications();
+        }
     } else if (gameState === GameStates.GAME_OVER) {
         // 游戏结束状态
-        drawUI(); // 绘制游戏结束界面
+        drawUI(); // 绘制基础UI
+        
+        // 绘制游戏结束界面
+        if (typeof drawGameOver !== 'undefined') {
+            drawGameOver();
+        }
     }
     
     // 使用requestAnimationFrame实现持续循环
     requestAnimationFrame(gameLoop);
+}
+
+// 更新连击系统
+function updateComboSystem() {
+    const currentTime = Date.now();
+    
+    // 如果连击超时（3秒无击杀），重置连击
+    if (player.comboCount > 0 && currentTime - player.lastKillTime > 3000) {
+        player.comboCount = 0;
+    }
+}
+
+// 增加击杀数
+function addKill() {
+    const currentTime = Date.now();
+    
+    // 增加总击杀数
+    player.killCount++;
+    
+    // 更新连击
+    if (currentTime - player.lastKillTime < 3000) {
+        player.comboCount++;
+    } else {
+        player.comboCount = 1;
+    }
+    
+    player.lastKillTime = currentTime;
+    
+    // 播放击杀音效
+    audioManager.playSound('enemyDeath', 0.7);
+}
+
+// 计算敌人生成数量
+function getEnemySpawnCount() {
+    // 基础生成数量为1
+    let spawnCount = 1;
+    
+    // 根据时间增加难度
+    if (gameTime > 60) spawnCount = 2;        // 1分钟后
+    if (gameTime > 180) spawnCount = 3;       // 3分钟后
+    if (gameTime > 300) spawnCount = 4;       // 5分钟后
+    if (gameTime > 600) spawnCount = 5;       // 10分钟后
+    
+    // 根据当前波次微调
+    const waveBonus = Math.floor(currentWave / 5);
+    spawnCount += waveBonus;
+    
+    // 限制最大生成数量
+    return Math.min(spawnCount, 8);
 }
 
 // 游戏初始化
@@ -263,10 +361,14 @@ function initGame() {
             // 启动游戏循环
             gameLoop();
             
-            // 设置敌人生成定时器
+            // 设置动态敌人生成定时器
             setInterval(() => {
-                if (gameState === GameStates.PLAYING) {
-                    spawnEnemy();
+                if (gameState === GameStates.PLAYING && !gameOver) {
+                    // 根据游戏时间动态调整生成数量
+                    const spawnCount = getEnemySpawnCount();
+                    for (let i = 0; i < spawnCount; i++) {
+                        spawnEnemy();
+                    }
                 }
             }, GameConfig.GAMEPLAY.ENEMY_SPAWN_INTERVAL);
             

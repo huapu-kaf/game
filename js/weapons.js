@@ -154,22 +154,50 @@ function updateBullets() {
                 enemy.health -= damage;
                 enemy.isHit = 10; // 设置受伤闪烁
                 
-                // 创建伤害数字
-                createDamageNumber(
-                    enemy.x + enemy.getWidth()/2,
-                    enemy.y,
-                    damage,
-                    isCritical,
-                    isCombo
-                );
+                // 更新伤害统计
+                player.damageDealt += damage;
+                player.totalDamage += damage;
+                
+                // 创建伤害数字（使用新的UI系统）
+                if (typeof addDamageNumber !== 'undefined') {
+                    addDamageNumber(
+                        enemy.x + enemy.getWidth()/2,
+                        enemy.y,
+                        damage,
+                        isCritical,
+                        false
+                    );
+                } else {
+                    // 备用方案
+                    createDamageNumber(
+                        enemy.x + enemy.getWidth()/2,
+                        enemy.y,
+                        damage,
+                        isCritical,
+                        isCombo
+                    );
+                }
                 
                 if (enemy.health <= 0) {
-                    // 播放敌人死亡音效
-                    audioManager.playSound('enemyDeath', 0.6);
+                    // 调用新的击杀系统
+                    if (typeof addKill !== 'undefined') {
+                        addKill();
+                    }
                     
                     // 连击系统
                     player.comboKills++;
                     player.comboTimer = GameConfig.GAMEPLAY.COMBO_TIMER;
+                    
+                    // 更新最高连击记录
+                    if (player.comboKills > (player.maxCombo || 0)) {
+                        player.maxCombo = player.comboKills;
+                    }
+                    
+                    // 屏幕震动效果
+                    if (typeof addScreenShake !== 'undefined') {
+                        const shakeIntensity = isCritical ? 8 : 3;
+                        addScreenShake(10, shakeIntensity);
+                    }
                     
                     // 创建经验宝石
                     const baseExp = enemy.type.exp || 20;

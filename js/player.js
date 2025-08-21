@@ -19,6 +19,9 @@ const player = {
     actionGlow: 0, // 动作光晕强度
     comboKills: 0, // 连击数
     comboTimer: 0, // 连击计时器
+    killCount: 0, // 总击杀数
+    comboCount: 0, // 当前连击数
+    lastKillTime: 0, // 上次击杀时间
     getWidth() { return assets.player ? assets.player.width : GameConfig.PLAYER.WIDTH; },
     getHeight() { return assets.player ? assets.player.height : GameConfig.PLAYER.HEIGHT; }
 };

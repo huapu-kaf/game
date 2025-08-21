@@ -147,6 +147,48 @@ const PassiveUpgrades = {
             { level: 3, description: '拾取范围 +100%', effect: 'pickupRange', value: 2.0 }
         ]
     },
+    luck: {
+        name: '幸运',
+        maxLevel: 5,
+        upgrades: [
+            { level: 1, description: '暴击率 +5%', effect: 'critRate', value: 0.05 },
+            { level: 2, description: '暴击率 +8%', effect: 'critRate', value: 0.08 },
+            { level: 3, description: '暴击率 +12%', effect: 'critRate', value: 0.12 },
+            { level: 4, description: '暴击率 +16%', effect: 'critRate', value: 0.16 },
+            { level: 5, description: '暴击率 +25%', effect: 'critRate', value: 0.25 }
+        ]
+    },
+    armor: {
+        name: '护甲',
+        maxLevel: 5,
+        upgrades: [
+            { level: 1, description: '伤害减免 5%', effect: 'damageReduction', value: 0.05 },
+            { level: 2, description: '伤害减免 8%', effect: 'damageReduction', value: 0.08 },
+            { level: 3, description: '伤害减免 12%', effect: 'damageReduction', value: 0.12 },
+            { level: 4, description: '伤害减免 16%', effect: 'damageReduction', value: 0.16 },
+            { level: 5, description: '伤害减免 25%', effect: 'damageReduction', value: 0.25 }
+        ]
+    },
+    regen: {
+        name: '生命恢复',
+        maxLevel: 3,
+        upgrades: [
+            { level: 1, description: '每秒10秒恢复 1 生命值', effect: 'healthRegen', value: 1 },
+            { level: 2, description: '每秒7秒恢复 1 生命值', effect: 'healthRegen', value: 2 },
+            { level: 3, description: '每秒5秒恢复 1 生命值', effect: 'healthRegen', value: 3 }
+        ]
+    },
+    cooldown: {
+        name: '冷却缩减',
+        maxLevel: 5,
+        upgrades: [
+            { level: 1, description: '所有武器冷却 -10%', effect: 'globalCooldown', value: 0.9 },
+            { level: 2, description: '所有武器冷却 -15%', effect: 'globalCooldown', value: 0.85 },
+            { level: 3, description: '所有武器冷却 -20%', effect: 'globalCooldown', value: 0.8 },
+            { level: 4, description: '所有武器冷却 -25%', effect: 'globalCooldown', value: 0.75 },
+            { level: 5, description: '所有武器冷却 -35%', effect: 'globalCooldown', value: 0.65 }
+        ]
+    },
     cooldown: {
         name: '冷却缩减',
         maxLevel: 5,
